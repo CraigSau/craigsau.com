@@ -1,2 +1,2 @@
-# craigsau.com
-Latest iteration of React TS web application
+# craigsau.dev
+Latest iteration of my personal web application

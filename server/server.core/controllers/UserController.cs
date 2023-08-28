@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using server.core.models;
+using server.infrastructure.models;
 
-namespace server.infrastructure.controllers;
+namespace server.core.controllers;
 
-[Route("[UserController]")]
 [ApiController]
+[Route("[controller]")]
 public class UserController : ControllerBase
 {
     private readonly ILogger<User> _logger;
@@ -14,17 +14,15 @@ public class UserController : ControllerBase
         _logger = logger;
     }
 
-    [Route("[TestUser]")]
-    [HttpGet(Name = "TestUser")]
+    [HttpGet]
     public IEnumerable<User> TestUser()
     {
-        return Enumerable.Range(1, 5).Select(index => new User
+        return Enumerable.Range(1, 5).Select(i => new User
         {
-            UserId = index,
+            UserId = i,
             FirstName = "Craig",
             LastName = "Sauers",
-
-        })
-        .ToArray();
+        }).ToArray();
     }
+
 }

@@ -8,21 +8,21 @@
     ".NETCoreApp,Version=v7.0": {
       "server/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.OpenApi": "7.0.7",
+          "Microsoft.AspNetCore.OpenApi": "7.0.10",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
           "server.dll": {}
         }
       },
-      "Microsoft.AspNetCore.OpenApi/7.0.7": {
+      "Microsoft.AspNetCore.OpenApi/7.0.10": {
         "dependencies": {
           "Microsoft.OpenApi": "1.4.3"
         },
         "runtime": {
           "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "assemblyVersion": "7.0.7.0",
-            "fileVersion": "7.0.723.27408"
+            "assemblyVersion": "7.0.10.0",
+            "fileVersion": "7.0.1023.36439"
           }
         }
       },
@@ -81,12 +81,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.OpenApi/7.0.7": {
+    "Microsoft.AspNetCore.OpenApi/7.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6E1I154QELFjQ4RvSWwZAlZrvB2Dy3aOkcYAQ+E4NsyqwKqFbG10HeWp/WJfq+2btUz1dKzmNMwnADf8WBk/0w==",
-      "path": "microsoft.aspnetcore.openapi/7.0.7",
-      "hashPath": "microsoft.aspnetcore.openapi.7.0.7.nupkg.sha512"
+      "sha512": "sha512-p5LiYt1mFJdS70zyHoydahohko2pLIoXiXwANRZGYYyTXcYNQpNUOt+At+lUgGgRwta28sUKVhy2W/93j0qwhA==",
+      "path": "microsoft.aspnetcore.openapi/7.0.10",
+      "hashPath": "microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",

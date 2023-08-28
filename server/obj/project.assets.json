@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "Microsoft.AspNetCore.OpenApi/7.0.7": {
+      "Microsoft.AspNetCore.OpenApi/7.0.10": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.4.3"
@@ -111,10 +111,10 @@
     }
   },
   "libraries": {
-    "Microsoft.AspNetCore.OpenApi/7.0.7": {
-      "sha512": "6E1I154QELFjQ4RvSWwZAlZrvB2Dy3aOkcYAQ+E4NsyqwKqFbG10HeWp/WJfq+2btUz1dKzmNMwnADf8WBk/0w==",
+    "Microsoft.AspNetCore.OpenApi/7.0.10": {
+      "sha512": "p5LiYt1mFJdS70zyHoydahohko2pLIoXiXwANRZGYYyTXcYNQpNUOt+At+lUgGgRwta28sUKVhy2W/93j0qwhA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.openapi/7.0.7",
+      "path": "microsoft.aspnetcore.openapi/7.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -122,7 +122,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll",
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.7.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
@@ -464,31 +464,29 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Microsoft.AspNetCore.OpenApi >= 7.0.7",
+      "Microsoft.AspNetCore.OpenApi >= 7.0.10",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
   "packageFolders": {
-    "/Users/craigsau/.nuget/packages/": {}
+    "C:\\Users\\craig\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server/server.csproj",
+      "projectUniqueName": "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj",
       "projectName": "server",
-      "projectPath": "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server/server.csproj",
-      "packagesPath": "/Users/craigsau/.nuget/packages/",
-      "outputPath": "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server/obj/",
+      "projectPath": "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj",
+      "packagesPath": "C:\\Users\\craig\\.nuget\\packages\\",
+      "outputPath": "d:\\Development\\Git\\craigsau.dev\\server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/craigsau/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\craig\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
-        "/usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -509,7 +507,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
-            "version": "[7.0.7, )"
+            "version": "[7.0.10, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -535,7 +533,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

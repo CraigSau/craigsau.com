@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\Git\\craigsau.dev\\server\\server.csproj": {}
+    "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj": {}
   },
   "projects": {
-    "D:\\Development\\Git\\craigsau.dev\\server\\server.csproj": {
+    "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Git\\craigsau.dev\\server\\server.csproj",
+        "projectUniqueName": "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj",
         "projectName": "server",
-        "projectPath": "D:\\Development\\Git\\craigsau.dev\\server\\server.csproj",
+        "projectPath": "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj",
         "packagesPath": "C:\\Users\\craig\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Git\\craigsau.dev\\server\\obj\\",
+        "outputPath": "d:\\Development\\Git\\craigsau.dev\\server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\craig\\AppData\\Roaming\\NuGet\\NuGet.Config"

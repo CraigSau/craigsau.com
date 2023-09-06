@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using server.infrastructure.models;
+using server.models;
 
-namespace server.core.controllers;
+namespace server.controllers;
 
 [ApiController]
 [Route("[controller]")]
@@ -24,5 +24,4 @@ public class UserController : ControllerBase
             LastName = "Sauers",
         }).ToArray();
     }
-
 }

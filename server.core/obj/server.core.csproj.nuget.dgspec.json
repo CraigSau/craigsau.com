@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj": {}
+    "d:\\Development\\Git\\craigsau.dev\\server.core\\server.core.csproj": {}
   },
   "projects": {
-    "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj": {
+    "d:\\Development\\Git\\craigsau.dev\\server.core\\server.core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj",
-        "projectName": "server",
-        "projectPath": "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj",
+        "projectUniqueName": "d:\\Development\\Git\\craigsau.dev\\server.core\\server.core.csproj",
+        "projectName": "server.core",
+        "projectPath": "d:\\Development\\Git\\craigsau.dev\\server.core\\server.core.csproj",
         "packagesPath": "C:\\Users\\craig\\.nuget\\packages\\",
-        "outputPath": "d:\\Development\\Git\\craigsau.dev\\server\\obj\\",
+        "outputPath": "d:\\Development\\Git\\craigsau.dev\\server.core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\craig\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -55,9 +59,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

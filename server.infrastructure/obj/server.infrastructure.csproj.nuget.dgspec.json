@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj": {}
+    "d:\\Development\\Git\\craigsau.dev\\server.infrastructure\\server.infrastructure.csproj": {}
   },
   "projects": {
-    "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj": {
+    "d:\\Development\\Git\\craigsau.dev\\server.infrastructure\\server.infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj",
-        "projectName": "server",
-        "projectPath": "d:\\Development\\Git\\craigsau.dev\\server\\server.csproj",
+        "projectUniqueName": "d:\\Development\\Git\\craigsau.dev\\server.infrastructure\\server.infrastructure.csproj",
+        "projectName": "server.infrastructure",
+        "projectPath": "d:\\Development\\Git\\craigsau.dev\\server.infrastructure\\server.infrastructure.csproj",
         "packagesPath": "C:\\Users\\craig\\.nuget\\packages\\",
-        "outputPath": "d:\\Development\\Git\\craigsau.dev\\server\\obj\\",
+        "outputPath": "d:\\Development\\Git\\craigsau.dev\\server.infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\craig\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,12 +37,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.5.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -55,9 +49,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -1,2 +1,3 @@
 # craigsau.dev
-Latest iteration of React TS web application
+
+Latest iteration of my personal web application

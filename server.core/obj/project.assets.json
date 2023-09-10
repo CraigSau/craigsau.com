@@ -469,24 +469,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\craig\\.nuget\\packages\\": {}
+    "/Users/craigsau/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\Git\\craigsau.dev\\server.core\\server.core.csproj",
+      "projectUniqueName": "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server.core/server.core.csproj",
       "projectName": "server.core",
-      "projectPath": "D:\\Development\\Git\\craigsau.dev\\server.core\\server.core.csproj",
-      "packagesPath": "C:\\Users\\craig\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\Git\\craigsau.dev\\server.core\\obj\\",
+      "projectPath": "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server.core/server.core.csproj",
+      "packagesPath": "/Users/craigsau/.nuget/packages/",
+      "outputPath": "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server.core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\craig\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/craigsau/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -530,7 +531,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
       }
     }
   }

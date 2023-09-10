@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gGJ1iegyhPG/5uprJb5aWO0gROZDlCBt03UZRJLyZ+3sbb7uPlNUweVuEDdBLpa2/yY/kaDsovOxibJv1uAaqA==",
+  "dgSpecHash": "PhOw53eGeU0DTqjEDY9MQ3jdv2tMNnqRQ7ZMZsnSxBP6zvCReuIn0PipJoJGt4wQcjdAWgseDb56pff/MAWiVg==",
   "success": true,
-  "projectFilePath": "d:\\Development\\Git\\craigsau.dev\\server.infrastructure\\server.infrastructure.csproj",
+  "projectFilePath": "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server.infrastructure/server.infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

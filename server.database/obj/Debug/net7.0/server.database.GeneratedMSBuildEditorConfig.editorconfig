@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = server.database
-build_property.ProjectDir = /Users/craigsau/Documents/Programming Stuff/craigsau.dev/server.database/
+build_property.ProjectDir = d:\Development\Git\craigsau.dev\server.database\

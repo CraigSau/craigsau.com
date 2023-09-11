@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="dbo\" />
-    <Folder Include="dbo\Tables\" />
+    <None Remove="dbo\Tables\User.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="dbo\Tables\User.sql" />
   </ItemGroup>
 
   <ItemGroup>

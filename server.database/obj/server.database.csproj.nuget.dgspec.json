@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server.database/server.database.csproj": {}
+    "d:\\Development\\Git\\craigsau.dev\\server.database\\server.database.csproj": {}
   },
   "projects": {
-    "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server.database/server.database.csproj": {
+    "d:\\Development\\Git\\craigsau.dev\\server.database\\server.database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server.database/server.database.csproj",
+        "projectUniqueName": "d:\\Development\\Git\\craigsau.dev\\server.database\\server.database.csproj",
         "projectName": "server.database",
-        "projectPath": "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server.database/server.database.csproj",
-        "packagesPath": "/Users/craigsau/.nuget/packages/",
-        "outputPath": "/Users/craigsau/Documents/Programming Stuff/craigsau.dev/server.database/obj/",
+        "projectPath": "d:\\Development\\Git\\craigsau.dev\\server.database\\server.database.csproj",
+        "packagesPath": "C:\\Users\\craig\\.nuget\\packages\\",
+        "outputPath": "d:\\Development\\Git\\craigsau.dev\\server.database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/craigsau/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\craig\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,28 +3,47 @@
 <head>
     <!--meta tags-->
     <meta charset="UTF-8">
+    <meta name="keywords" content="Craig, Sauers, Software, Programming, Coding, Fitness, Travel, YouTube">
+	  <meta name="description" content="Craig Sauers is currently a student at Bethany College studying for a major 
+	    in Computer Science and a minor in Mathematics. He loves travel, fitness, technology, and learning.">
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--CSS Styles -->
+    <!--CSS Styles-->
     <link rel="stylesheet" href="../client/styles/index.css" />
 
     <title>Craig Sauers</title>
-        
+    
+    <!--Scripts-->
     <script src="../htmx/htmx.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1fb228663.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <!--Navbar-->
-  <nav>
-    
-    <ul>
-      <li><h1><a>Craig Sau</a></h1></li>
-      <li>About</li>
-      <li>Skills</li>
-      <li>Projects</li>
-      <li>Contact</li>
+  <header>
+    <!--Navbar-->
+    <nav class="nav">
+    <ul class="nav-bar">
+      <li class="logo">
+        <h1><a href="/client/index.html">Craig Sau</a></h1>
+      </li>
+      <input type="checkbox" id="check"/>
+      <span class="menu">
+        <li><a>About</a></li>
+        <li><a>Skills</a></li>
+        <li><a>Projects</a></li>
+        <li><a>Contact</a></li>
+        <label for="check" class="close-menu">
+          <i class="fas fa-times"></i>
+        </label>
+      </span>
+      <label for="check" class="open-menu">
+        <i class="fas fa-bars"></i>
+      </label>
     </ul>
   </nav>
+  </header>
+  
   <!--Hero Section-->
     <main>
        <h1>Hi, I'm Craig.</h1> 

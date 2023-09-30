@@ -109,7 +109,8 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 80%;
+        padding: 1rem;
+        width: 100%;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -120,7 +121,7 @@ body {
     }
 
     .menu li {
-        margin-top: 40px;
+        margin-top: 2rem;
     }
 
     .menu li a {
@@ -130,6 +131,12 @@ body {
     .open-menu , .close-menu {
         display: block;
         padding: 2rem;
+        margin-right: 1rem;
+    }
+
+    .close-menu {
+        margin-bottom: 1rem;
+        padding-top: 1.5rem;
     }
 
     #check:checked ~ .menu {

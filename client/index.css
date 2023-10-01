@@ -6,12 +6,13 @@
    --normal-font: 400;
    --bold-font: 700;
    --bolder-font: 900;
-
+   --grey-color: #313131;
 }
 
 /* Styles */
 html {
     scroll-behavior: smooth;
+    background-color: var(--grey-color);
 }
 
 ul {
@@ -117,7 +118,7 @@ body {
         top: 0;
         right: -100%;
         z-index: 100;
-        background-color: #313131;
+        background-color: var(--grey-color);
         transition: all 0.2s ease-in-out;
         visibility: hidden;
     }

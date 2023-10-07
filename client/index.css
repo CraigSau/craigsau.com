@@ -12,7 +12,6 @@
 /* Styles */
 html {
     scroll-behavior: smooth;
-    background-color: var(--grey-color);
 }
 
 ul {

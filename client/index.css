@@ -44,7 +44,6 @@ body {
 
 .menu {
     display: flex;
-    padding-right: 2rem;
 }
 
 .menu li {

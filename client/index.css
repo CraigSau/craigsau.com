@@ -138,7 +138,7 @@ body {
     .close-menu {
         margin-bottom: 2rem;
         margin-right: .75rem;
-        padding-top: 1.5rem;
+        padding-top: 1rem;
     }
 
     #check:checked ~ .menu {

@@ -1,16 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Variables */
-:root {
-   --font-family: "Roboto", sans-serf;
+/* :root {
+   --font-family: 'Source Code Pro', monospace;  
    --normal-font: 400;
    --bold-font: 700;
    --bolder-font: 900;
    --grey-color: #313131;
-}
+} */
 
 /* Styles */
-html {
+/* html {
     scroll-behavior: smooth;
 }
 
@@ -26,10 +30,17 @@ a {
 
 body {
     font-family: var(--font-family);
+    margin: 0;
 }
 
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+} */
+
 /* Nav Bar */
-.nav-bar {
+/* .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,8 +49,9 @@ body {
     overflow-x: hidden;
 }
 
-.logo img {
-    width: 40px;
+.get-user {
+    display: flex;
+    flex-direction: row;
 }
 
 .menu {
@@ -93,7 +105,62 @@ body {
 
 #check {
     display: none;
+} */
+
+/* Landing Section */
+
+/* .landing {
+    background-color: var(--grey-color);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
 }
+
+.non-landing-container {
+    padding: 0 5rem 0 5rem;
+} */
+
+/* Typing Effect Main Text */
+/* @keyframes typing {
+0% { content: ""; }
+1% { content: "H"; }
+2% { content: "Hi"; }
+3% { content: "Hi,"; }
+4% { content: "Hi, "; }
+5% { content: "Hi, I"; }
+6% { content: "Hi, I'"; }
+7% { content: "Hi, I'm"; }
+8% { content: "Hi, I'm "; }
+9% { content: "Hi, I'm C"; }
+10% { content: "Hi, I'm Cr"; }
+11% { content: "Hi, I'm Cra"; }
+12% { content: "Hi, I'm Crai"; }
+13% { content: "Hi, I'm Craig"; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s;
+}
+
+.typewriter::after {
+    animation: none;
+}
+
+.cursor {
+    content: "";
+    border-right: 1px solid black;
+    animation: blink 0.5s linear infinite;
+} */
+
+
 
 /* Media */
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
@@ -103,7 +170,8 @@ body {
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
 /* Media Queries */
-@media (max-width:641px) {
+/* Mobile Phones */
+/* @media (max-width:641px) {
     .menu {
         flex-direction: column;
         align-items: center;
@@ -119,10 +187,13 @@ body {
         visibility: hidden;
     }
 
+    .get-user {
+        flex-direction: column;
+    }
+
     .menu li {
         margin-top: 2rem;
         align-items: center;
-        margin-left: 5rem;
     }
 
     .menu li a {
@@ -130,18 +201,16 @@ body {
     }
 
     .open-menu , .close-menu {
-        display: block;
+        display: flex;
         padding: 1rem;
     }
 
     .close-menu {
-        margin-bottom: 2rem;
-        margin-right: .75rem;
-        padding-top: 1rem;
+        padding-bottom: 3rem;
     }
 
     #check:checked ~ .menu {
         right: 0;
         visibility: visible;
     }
-}
+} */

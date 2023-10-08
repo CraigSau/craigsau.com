@@ -10,53 +10,84 @@
 
   <!--CSS Styles-->
   <!--Prod Style-->
-  <link rel="stylesheet" href="/index.css" />
+  <!-- <link rel="stylesheet" href="./index.css" /> -->
+  <link rel="stylesheet" href="./dist/output.css" />
   <!--Local Style-->
-  <link rel="stylesheet" href="../client/index.css" />
+  <!-- <link rel="stylesheet" href="../client/index.css" /> -->
+  <!-- <line rel="stylesheet" type="text/css" href="/client/dist/output.css" /> -->
 
   <title>Craig Sauers</title>
-    
-    <!--Scripts-->
-    <script src="../htmx/htmx.min.js"></script>
-    <script src="https://kit.fontawesome.com/a1fb228663.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header>
-    <!--Navbar-->
-    <nav class="nav">
-      <ul class="nav-bar">
-        <li class="logo">
-          <h1><a href="/client/index.html">Craig Sau</a></h1>
-        </li>
-        <input type="checkbox" id="check"/>
-        <span class="menu">
-          <li><a>About</a></li>
-          <li><a>Skills</a></li>
-          <li><a>Projects</a></li>
-          <li><a>Contact</a></li>
-          <label for="check" class="close-menu">
-            <i class="fas fa-times" id="x-button"></i>
-          </label>
-        </span>
-        <label for="check" class="open-menu">
-          <i class="fas fa-bars"></i>
-        </label>
-      </ul>
-    </nav>
-  </header>
-  
-  <!--Hero Section-->
     <main>
-       <h1>Hi, I'm Craig.</h1> 
-       <h2>My passions include</h2>
-    </main> 
+      <!--Navbar-->
+      <header>
+        <nav class="nav">
+          <ul class="nav-bar">
+            <li class="logo">
+              <h1><a href="./index.html">Craig Sau</a></h1>
+            </li>
+            <input type="checkbox" id="check"/>
+            <span class="menu">
+              <li><a>Blog</a></li>
+              <div class="get-user">
+                <li><a>Sign-Up</a></li>
+                <li><a>Log-In</a></li>
+              </div>
+              <label for="check" class="close-menu">
+                <i class="fa-solid fa-xmark" id="x-button"></i>
+              </label>
+            </span>
+            <label for="check" class="open-menu">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </ul>
+        </nav>
+      </header>
+      <!--Hero Section-->
+      <div class="landing">
+        <div>
+          <h1><span class="typewriter"></span><span class="cursor"></span><h1> 
+          <h1 class="underline">Testing Tailwind!</h1>
+          <!-- <h1>My passions include</h1> -->
+        </div>
+      </div> 
+    </main>
+    
+    <div class="non-landing-container">
+      <!--About / Recent Blog Posts-->
+      <div class="about-container">
+        <h2>About</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio ea blanditiis facilis repellat, dolore quam doloribus porro at labore, sed incidunt quae molestias architecto. Modi amet repudiandae voluptatum similique ipsam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laborum minus, quasi ea nesciunt sequi debitis accusamus repudiandae reprehenderit? Illo atque voluptas voluptate eveniet architecto quos molestias facere? Neque, dolorem!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, id, ut dolor laudantium laboriosam expedita maiores blanditiis saepe soluta vel consectetur itaque aperiam odit similique recusandae animi cum ullam? Illo?
+        </p>
+      </div>
+      <!--Skills Section-->
+      <div class="skills-container">
+        <h2>Skills</h2>
+      </div>
+      <!--Projects Section-->
+      <div class="projects-container">
+        <h2>Projects</h2>
+      </div>
+      <!--Contact Section-->
+      <div class="contact-container">
+        <h2>Reach Out!</h2>
+      </div>
+      <!--Social Accounts-->
+      <footer class="socials-footer">
 
-    <!--More About / Recent Blog Posts-->
-    <!--Skills Section-->
-    <!--Projects Section-->
-    <!--Contact Section-->
-    <!--Social Accounts-->
+      </footer>
+      </div>
     <!--Scripts-->
-</body>
+    <script src="./htmx/htmx.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1fb228663.js" crossorigin="anonymous"></script>
+  </body>
 </html>

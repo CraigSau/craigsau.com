@@ -9,12 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!--CSS Styles-->
-  <!--Prod Style-->
-  <!-- <link rel="stylesheet" href="./index.css" /> -->
-  <link rel="stylesheet" href="./dist/output.css" />
-  <!--Local Style-->
-  <!-- <link rel="stylesheet" href="../client/index.css" /> -->
-  <!-- <line rel="stylesheet" type="text/css" href="/client/dist/output.css" /> -->
+  <link rel="stylesheet" href="./index.css" />
 
   <title>Craig Sauers</title>
 </head>
@@ -48,8 +43,7 @@
       <!--Hero Section-->
       <div class="landing">
         <div>
-          <h1><span class="typewriter"></span><span class="cursor"></span><h1> 
-          <h1 class="underline">Testing Tailwind!</h1>
+          <h1><span id="typewriter" onload="typeWriter()"></span><span class="cursor"></span><h1> 
           <!-- <h1>My passions include</h1> -->
         </div>
       </div> 
@@ -60,10 +54,10 @@
       <div class="about-container">
         <h2>About</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio ea blanditiis facilis repellat, dolore quam doloribus porro at labore, sed incidunt quae molestias architecto. Modi amet repudiandae voluptatum similique ipsam.
+          This website is currently in progress, so bear with the emptiness.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laborum minus, quasi ea nesciunt sequi debitis accusamus repudiandae reprehenderit? Illo atque voluptas voluptate eveniet architecto quos molestias facere? Neque, dolorem!
+          The tech stack currently being used to build this project is plain HTML, CSS, Javascript, and HTMX for the frontend, along with a .NET backend. 
         </p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, id, ut dolor laudantium laboriosam expedita maiores blanditiis saepe soluta vel consectetur itaque aperiam odit similique recusandae animi cum ullam? Illo?
@@ -88,6 +82,7 @@
       </div>
     <!--Scripts-->
     <script src="./htmx/htmx.min.js"></script>
+    <script src="./index.js"></script>
     <script src="https://kit.fontawesome.com/a1fb228663.js" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -13,12 +13,9 @@
     "url": "git+https://github.com/CraigSau/craigsau.dev.git"
   },
   "author": "Craig Sauers",
-  "license": "ISC",
+  "license": "",
   "bugs": {
     "url": "https://github.com/CraigSau/craigsau.dev/issues"
   },
-  "homepage": "https://github.com/CraigSau/craigsau.dev#readme",
-  "devDependencies": {
-    "tailwindcss": "^3.3.3"
-  }
+  "homepage": "https://github.com/CraigSau/craigsau.dev#readme"
 }

@@ -105,7 +105,12 @@ main {
 }
 
 /* Landing Section */
-
+.canvas {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
 .landing {
     background-color: var(--grey-color);
     width: 100%;
@@ -119,6 +124,12 @@ main {
     padding: 0 5rem 0 5rem;
 }
 
+.introHeader {
+    padding: 5;
+    display: flex;
+    align-items: center;
+}
+
 @keyframes blink {
   from, to { border-color: transparent; }
   50% { border-color: black; }
@@ -126,7 +137,7 @@ main {
 
 .cursor {
     content: "";
-    border-right: 1px solid black;
+    border-right: 1ch solid black;
     animation: blink 0.5s linear infinite;
 }
 

@@ -37,6 +37,11 @@ main {
 }
 
 /* Nav Bar */
+
+header {
+    background-color: darkgrey; 
+}
+
 .nav-bar {
     display: flex;
     justify-content: space-between;

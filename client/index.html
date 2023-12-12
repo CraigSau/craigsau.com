@@ -1,87 +1,96 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <!--meta tags-->
     <meta charset="UTF-8">
     <meta name="keywords" content="Craig, Sauers, Software, Programming, Coding, Fitness, Travel, YouTube">
-	  <meta name="description" content="Craig Sauers is currently working as software developer. He loves travel, fitness, technology, and learning.">
-	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Craig Sauers is currently working as software developer. He loves travel, fitness, technology, and learning.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!--CSS Styles-->
-  <link rel="stylesheet" href="./index.css" />
+    <!--CSS Styles-->
+    <link rel="stylesheet" href="./index.css" />
 
-  <title>Craig Sauers</title>
+    <title>Craig Sauers</title>
 </head>
 
 <body>
     <main>
-      <!--Navbar-->
-      <header>
-        <nav class="nav">
-          <ul class="nav-bar">
-            <li class="logo">
-              <h1><a href="./index.html">CraigSau</a></h1>
-            </li>
-            <input type="checkbox" id="check"/>
-            <span class="menu">
-              <li><a>Blog</a></li>
-              <div class="get-user">
-                <li><a>Sign-Up</a></li>
-                <li><a>Log-In</a></li>
-              </div>
-              <label for="check" class="close-menu">
-                <i class="fa-solid fa-xmark" id="x-button"></i>
-              </label>
-            </span>
-            <label for="check" class="open-menu">
-              <i class="fa-solid fa-bars"></i>
-            </label>
-          </ul>
-        </nav>
-      </header>
-      <!--Hero Section-->
-      <div class="landing">
-        <div id="introHeader">
-          <h1><span id="intro" onload="typeWriter()"></span><span id="tw1" class="cursor"></span><h1> 
-          <!-- <h1>My passions include</h1> -->
-          <h1><span id="passions" onload="typeWriter()"></span><span id="tw2"></span><h1>
-          <h1><span id="passionsWords" onload="typeWriter()"></span><span id="tw3"></span><h1> 
+        <!--Navbar-->
+        <header>
+            <nav class="nav">
+                <ul class="nav-bar">
+                    <li class="logo">
+                        <h1><a href="./index.html">CraigSau</a></h1>
+                    </li>
+                    <input type="checkbox" id="check" />
+                    <span class="menu">
+                        <li><a>Blog</a></li>
+                        <div class="get-user">
+                            <li><a>Sign-Up</a></li>
+                            <li><a>Log-In</a></li>
+                        </div>
+                        <label for="check" class="close-menu">
+                            <i class="fa-solid fa-xmark" id="x-button"></i>
+                        </label>
+                    </span>
+                    <label for="check" class="open-menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                </ul>
+            </nav>
+        </header>
+        <!--Hero Section-->
+        <div class="landing">
+            <div id="introHeader">
+                <div>
+                <h1><span id="intro" onload="typeWriter()"></span><span id="tw1" class="cursor"></span>
+                </h1>
+                </div>
+                <!-- <h1>My passions include</h1> -->
+                <div>
+                <h1><span id="passions" onload="typeWriter()"></span><span id="tw2"></span>
+                </h1>
+                </div>
+            </div>
         </div>
-      </div> 
     </main>
-    
-    <div class="non-landing-container">
-      <!--About / Recent Blog Posts-->
-      <div class="about-container">
-        <h2>About</h2>
-        <p>
-          This website is currently in progress, so bear with the emptiness.
-        </p>
-        <p>
-          The tech stack currently being used to build this project is plain HTML, CSS, Javascript, and HTMX for the frontend, along with a .NET backend. 
-        </p>
-      </div>
-      <!--Skills Section-->
-      <div class="skills-container">
-        <h2>Skills</h2>
-      </div>
-      <!--Projects Section-->
-      <div class="projects-container">
-        <h2>Projects</h2>
-      </div>
-      <!--Contact Section-->
-      <div class="contact-container">
-        <h2>Reach Out!</h2>
-      </div>
-      <!--Social Accounts-->
-      <footer class="socials-footer">
 
-      </footer>
-      </div>
+    <div class="non-landing-container">
+        <!--About / Recent Blog Posts-->
+        <div class="about-container">
+            <h2>About</h2>
+            <p>
+                This website is currently in progress, so bear with the emptiness.
+            </p>
+            <p>
+                The tech stack currently being used to build this project is plain HTML, CSS, Javascript, and HTMX for
+                the frontend, along with a .NET backend.
+            </p>
+        </div>
+        <!--Skills Section-->
+        <div class="skills-container">
+            <h2>Skills</h2>
+        </div>
+        <!--Projects Section-->
+        <div class="projects-container">
+            <h2>Projects</h2>
+        </div>
+        <!--Contact Section-->
+        <div class="contact-container">
+            <h2>Reach Out!</h2>
+        </div>
+        <!--Social Accounts-->
+        <footer class="socials-footer">
+
+        </footer>
+    </div>
     <!--Scripts-->
     <script src="./htmx/htmx.min.js"></script>
     <script src="./index.js"></script>
     <script src="https://kit.fontawesome.com/a1fb228663.js" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>

@@ -106,3 +106,4 @@ dist
 # .NET Solution Specific Files
 obj
 bin
+.DS_Store

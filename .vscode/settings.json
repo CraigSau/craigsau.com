@@ -1,0 +1,5 @@
+{
+    "dotnet.defaultSolution": "server.sln",
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.root": "/client"
+}

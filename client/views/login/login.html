@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Craig, Sauers, Software, Programming, Coding, Fitness, Travel, YouTube">
+    <meta name="description"
+        content="Craig Sauers is currently working as software developer. He loves travel, fitness, technology, and learning.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS Styles-->
+    <link rel="stylesheet" href="../../base.css" />
+    <script src="../../header.js" type="text/javascript" defer></script>
+
+    <title>Craig Sauers</title>
+</head>
+
+<body>
+    <header-component></header-component>
+    <div>
+        <h2>Login</h2>
+        <div hx-ext="response-targets">
+            <form hx-post="http://localhost:5286/Account/Login" hx-trigger="submit" 
+                hx-target-error='#server-errors'>
+                <div class="inputBox">
+                    <input name="userName" type="text" placeholder="Username" required>
+                </div>
+                <div class="inputBox">
+                    <input name="passwordHash" type="password" placeholder="Password" required>
+                </div>
+                <div>
+                    <button type="submit" required><i>Login</i></button>
+                </div>
+                <br>
+                <div id="server-errors"></div>
+            </form>
+            <div>
+                <a href="../register/register.html">Register</a>
+            </div>
+        </div>
+    </div>
+    <script src="../../htmx/htmx.min.js"></script>
+    <script src="../../htmx/response-targets.js"></script>
+</body>

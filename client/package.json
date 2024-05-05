@@ -1,0 +1,26 @@
+{
+  "name": "craigsau.dev",
+  "version": "1.0.0",
+  "description": "Front-end of my personal portfolio website.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:digitalocean": "npm install --include=dev && npm run build && npm ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CraigSau/craigsau.dev.git"
+  },
+  "author": "CraigSau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CraigSau/craigsau.dev/issues"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "homepage": "https://github.com/CraigSau/craigsau.dev#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

@@ -1,3 +1,6 @@
+// Should anyone find this file, I am not proud of the contents of this script
+// However... F JS ¯\_(ツ)_/¯
+// This is just a stopgap until I stop getting skill diffed and rewrite this all in C with Sokol for a naitive cross platform experience anyways
 var i = 0;
 var j = 0;
 var text = "Hi, I'm Craig"
@@ -101,8 +104,8 @@ function typeWriterRecurringType() {
     if (letter < passions[word].length && wordComplete == false) {
         document.querySelector('#passions').innerHTML += passions[word].charAt(letter);
         letter++;
-        if (letter >= passions[word].length) { 
-            wordComplete = true; 
+        if (letter >= passions[word].length) {
+            wordComplete = true;
             fadeIn();
         }
     }
@@ -120,6 +123,7 @@ function typeWriterRecurringType() {
     setTimeout(typeWriterRecurringType, speed)
 }
 
+// Fade in work with me button
 var opacity = 0;
 var intervalID = 0;
 

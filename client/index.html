@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--CSS Styles-->
-    <link rel="stylesheet" href="./base.css" />
     <script src="./header.js" type="text/javascript" defer></script>
+    <link href="./output.css" rel="stylesheet" />
 
 
     <title>Craig Sauers</title>
@@ -20,28 +20,114 @@
 
 <body>
     <main>
-        <!--Navbar-->
-        <header-component></header-component>
-        <!--Hero Section-->
-        <div class="landing">
-            <div id="introHeader">
-                <div>
-                    <h1><span id="intro" onload="typeWriter()"></span><span id="tw1" class="cursor"></span>
-                    </h1>
+        <section class="bg-black h-dvh">
+            <!--Navbar-->
+            <nav class="relative px-4 py-4 flex justify-between items-center bg-zinc-800">
+                <a class="text-3xl font-bold leading-none text-green-600" href="#">
+                    CraigSau
+                </a>
+                <div class="lg:hidden">
+                    <button class="navbar-burger flex items-center text-green-600 p-3">
+                        <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Mobile menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                        </svg>
+                    </button>
                 </div>
-                <!-- <h1>My passions include</h1> -->
-                <div>
-                    <h1><span id="passions" onload="typeWriter()"></span><span id="tw2"></span>
-                    </h1>
+                <ul
+                    class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                    <li><a class="text-sm text-gray-400 hover:text-green-500" href="#">Blog</a></li>
+                    <li><a class="text-sm text-gray-400 hover:text-green-500" href="#">Contact</a></li>
+                </ul>
+                <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-slate-500 hover:bg-slate-700 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
+                    href="/views/login/login.html">Login</a>
+                <a class="hidden lg:inline-block py-2 px-6 bg-green-600 hover:bg-green-700 text-sm text-white font-bold rounded-xl transition duration-200"
+                    href="/views/register/register.html">Register</a>
+            </nav>
+
+            <!-- Mobile -->
+            <div class="navbar-menu relative z-50 hidden">
+                <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav
+                    class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-black border-r overflow-y-auto">
+                    <div class="flex items-center mb-8">
+                        <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                            <svg class="h-12" alt="logo" viewBox="0 0 10240 10240">
+                            </svg>
+                        </a>
+                        <button class="navbar-close">
+                            <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded"
+                                    href="#">Blog</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-green-50 hover:text-green-600 rounded"
+                                    href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto">
+                        <div class="pt-6">
+                            <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-slate-500 hover:bg-slate-700 rounded-xl"
+                                href="/views/login/login.html">Login</a>
+                            <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-green-600 hover:bg-green-700  rounded-xl"
+                                href="/views/register/register.html">Register</a>
+                        </div>
+                        <p class="my-4 text-xs text-center text-gray-400">
+                            <span>Just a kid building stuff</span>
+                        </p>
+                    </div>
+                </nav>
+            </div>
+
+            <!--Hero Section-->
+            <div class="text-white py-20 pb-0 items-center">
+                <div class="container mx-auto items-center flex flex-col my-12 md:my-24">
+                    <div class="flex flex-col w-full lg:w-1/3 justify-center items-center p-8">
+                        <h1 class="text-green-600 text-xl md:text-2xl p-2 tracking-loose leading-relaxed">
+                            <span id="intro" onload="typeWriter()"></span><span id="tw1" class="cursor"></span>
+                        </h1>
+                    </div>
+                    <div class="flex flex-col justify-center items-center ">
+                        <h2 class="text-green-600 text-xl md:text-2xl p-4 mb-2 w-full">
+                            <span class="w-full" id="passionsprev" onload="typeWriter()"></span><span id="tw2"></span>
+                        </h2>
+                    </div>
+                    <div class="flex flex-col justify-center items-center ">
+                        <h2 class="text-green-600 text-xl md:text-2xl p-4 mb-2 w-full">
+                            <span class="w-full" id="passions" onload="typeWriter()"></span><span id="tw3"></span>
+                        </h2>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="flex flex-col items-center justify-center opacity-0" id="wwmButton">
+                <div class="relative inline-flex group items-center">
+                    <div
+                        class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#00CC00] via-[#00CC00] to-[#00CC00] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                    </div>
+                    <a href="#"
+                        class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-green-600 transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                        role="button">Work With Me
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <div class="non-landing-container">
+    <div class="flex flex-col items-center justify-center bg-zinc-800">
         <!--About / Recent Blog Posts-->
-        <div class="about-container">
-            <h2>About</h2>
+        <div class="">
+            <h2 class="flex flex-col items-center justify-center">About</h2>
             <p>
                 This website is currently in progress, so bear with the emptiness.
             </p>
@@ -50,19 +136,19 @@
             </p>
         </div>
         <!--Skills Section-->
-        <div class="skills-container">
+        <div class="">
             <h2>Skills</h2>
         </div>
         <!--Projects Section-->
-        <div class="projects-container">
+        <div class="">
             <h2>Projects</h2>
         </div>
         <!--Contact Section-->
-        <div class="contact-container">
+        <div class="">
             <h2>Reach Out!</h2>
         </div>
         <!--Social Accounts-->
-        <footer class="socials-footer">
+        <footer class="">
 
         </footer>
     </div>

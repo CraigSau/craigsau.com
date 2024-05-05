@@ -21,6 +21,47 @@ var wordComplete = false;
 
 document.addEventListener("DOMContentLoaded", typeWriter());
 
+// Hamburger Menu stuff
+document.addEventListener('DOMContentLoaded', function() {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+});
+
 function typeWriter() {
     if (i < text.length) {
         document.querySelector("#tw1").classList.add('cursor');
@@ -28,14 +69,14 @@ function typeWriter() {
         i++;
         setTimeout(typeWriter, speed);
     }
-    else if (i >= text.length && j < text2.length){
+    else if (i >= text.length && j < text2.length) {
         setTimeout(function() {
             document.querySelector("#tw1").classList.remove('cursor');
             document.querySelector("#tw2").classList.add('cursor');
             typeWriterPassion();
         }, 1000);
     }
-    else { 
+    else {
         setTimeout(function() {
             typeWriterRecurringType();
         }, 1000);
@@ -45,9 +86,9 @@ function typeWriter() {
 
 function typeWriterPassion() {
     if (j < text2.length) {
-        document.querySelector("#passions").innerHTML += text2.charAt(j);
+        document.querySelector("#passionsprev").innerHTML += text2.charAt(j);
         j++;
-        setTimeout(typeWriterPassion, speed);  
+        setTimeout(typeWriterPassion, speed);
     }
     else {
         typeWriterRecurringType();
@@ -55,10 +96,15 @@ function typeWriterPassion() {
 };
 
 function typeWriterRecurringType() {
+    document.querySelector("#tw2").classList.remove('cursor');
+    document.querySelector("#tw3").classList.add('cursor');
     if (letter < passions[word].length && wordComplete == false) {
         document.querySelector('#passions').innerHTML += passions[word].charAt(letter);
         letter++;
-        if (letter >= passions[word].length) { wordComplete = true; }
+        if (letter >= passions[word].length) { 
+            wordComplete = true; 
+            fadeIn();
+        }
     }
     else if (wordComplete == true) {
         let string = document.querySelector("#passions").innerHTML;
@@ -66,12 +112,31 @@ function typeWriterRecurringType() {
         document.querySelector("#passions").innerHTML = string;
         letter = 0;
         if (letter == 0) {
-            wordComplete = false; 
+            wordComplete = false;
             word++;
         }
     }
-    if (word == passions.length) {word = 0;} 
+    if (word == passions.length) { word = 0; }
     setTimeout(typeWriterRecurringType, speed)
+}
+
+var opacity = 0;
+var intervalID = 0;
+
+function fadeIn() {
+    setInterval(show, 200);
+}
+
+function show() {
+    var body = document.getElementById("wwmButton");
+    opacity = Number(window.getComputedStyle(body)
+        .getPropertyValue("opacity"));
+    if (opacity < 1) {
+        opacity = opacity + 0.1;
+        body.style.opacity = opacity
+    } else {
+        clearInterval(intervalID);
+    }
 }
 
 
@@ -81,7 +146,7 @@ function typeWriterRecurringType() {
 // Basically I suck, skill diff
 function typeWriterPassionRecurring() {
     for (let wordListInd = 0; wordListInd < passions.length; wordListInd++) {
-        let word = ""; 
+        let word = "";
         console.log("BIG LOOP");
         for (let wordInd = 0; wordInd < passions[wordListInd].length; wordInd++) {
             word = passions[wordListInd].charAt(wordInd);

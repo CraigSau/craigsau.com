@@ -18,7 +18,49 @@ var letter = 0;
 var passionsCount = passions.length;
 var wordComplete = false;
 
+
 document.addEventListener("DOMContentLoaded", typeWriter());
+
+// Hamburger Menu stuff
+document.addEventListener('DOMContentLoaded', function() {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+});
 
 function typeWriter() {
     if (i < text.length) {
@@ -96,6 +138,7 @@ function show() {
         clearInterval(intervalID);
     }
 }
+
 
 // THIS SHIT SHOULD HAVE WORKED, BUT SOME DUMB ASS BULL SHIT IS GOING ON AND IDK WHAT SO 
 // I GAVE UP AND HOBBLED TOGETHER THIS DUMB SHIT ABOVE AND LEAVING THIS HERE TO GET MAD 

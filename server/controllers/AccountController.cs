@@ -35,6 +35,7 @@ public class AccountController : ControllerBase
     [AllowAnonymous]
     public async Task<IActionResult> Register([FromForm] User newUser)
     {
+        _logger.LogInformation("Attempting to register new user!");
         if (ModelState.IsValid && newUser != null)
         {
             var result = await _userManager.CreateAsync(newUser, newUser.PasswordHash!);

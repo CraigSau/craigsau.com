@@ -22,8 +22,7 @@
     <div>
         <h2>Login</h2>
         <div hx-ext="response-targets">
-            <form hx-post="http://localhost:5286/Account/Login" hx-trigger="submit" 
-                hx-target-error='#server-errors'>
+            <form hx-post="https://localhost:5286/Account/Login" hx-trigger="submit" hx-target-error='#server-errors'>
                 <div class="inputBox">
                     <input name="userName" type="text" placeholder="Username" required>
                 </div>

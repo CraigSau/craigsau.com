@@ -77,14 +77,19 @@ public class Program
         app.UseHttpsRedirection();
 
         app.UseRouting();
+        //app.UseRateLimiter();
+
         app.UseCors();
+
         app.UseAuthentication();
         app.UseAuthorization();
 
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapControllers();
-        });
+        app.MapControllers();
+
+        // app.UseEndpoints(endpoints =>
+        // {
+        //     endpoints.MapControllers();
+        // });
 
         app.Run();
     }

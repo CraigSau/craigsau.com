@@ -8,8 +8,15 @@ body {
 }
 
 @keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: #16a34a; }
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #16a34a;
+    }
 }
 
 .cursor {

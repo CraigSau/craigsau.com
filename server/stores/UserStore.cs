@@ -49,7 +49,7 @@ public class UserStore : IUserStore<User>, IUserPasswordStore<User>, IUserEmailS
         if (normalizedName == null) throw new ArgumentNullException(nameof(normalizedName));
 
         user.NormalizedUserName = normalizedName;
-        return Task.FromResult<object>(null);
+        return Task.FromResult<object?>(null);
     }
 
     public Task<string?> GetNormalizedUserNameAsync(User? user, CancellationToken cancellationToken)
@@ -119,7 +119,7 @@ public class UserStore : IUserStore<User>, IUserPasswordStore<User>, IUserEmailS
         if (passwordHash == null) throw new ArgumentNullException(nameof(passwordHash));
 
         user.PasswordHash = passwordHash;
-        return Task.FromResult<object>(null);
+        return Task.FromResult<object?>(null);
 
     }
 
@@ -139,14 +139,14 @@ public class UserStore : IUserStore<User>, IUserPasswordStore<User>, IUserEmailS
         return Task.FromResult(user.Email);
     }
 
-    public Task SetEmailAsync(User user, string email, CancellationToken cancellationToken)
+    public Task SetEmailAsync(User user, string? email, CancellationToken cancellationToken)
     {
         cancellationToken.ThrowIfCancellationRequested();
         if (user == null) throw new ArgumentNullException(nameof(user));
         if (email == null) throw new ArgumentNullException(nameof(email));
 
         user.Email = email;
-        return Task.FromResult<object>(null);
+        return Task.FromResult<object?>(null);
     }
 
     public Task<bool> GetEmailConfirmedAsync(User user, CancellationToken cancellationToken)
@@ -163,10 +163,10 @@ public class UserStore : IUserStore<User>, IUserPasswordStore<User>, IUserEmailS
         if (user == null) throw new ArgumentNullException(nameof(user));
 
         user.EmailConfirmed = emailConfirmed;
-        return Task.FromResult<object>(null);
+        return Task.FromResult<object?>(null);
     }
 
-    public Task<string?> GetNormalizedEmailAsync(User user, CancellationToken cancellationToken) 
+    public Task<string?> GetNormalizedEmailAsync(User user, CancellationToken cancellationToken)
     {
         cancellationToken.ThrowIfCancellationRequested();
         if (user == null) throw new ArgumentNullException(nameof(user));
@@ -174,14 +174,14 @@ public class UserStore : IUserStore<User>, IUserPasswordStore<User>, IUserEmailS
         return Task.FromResult(user.NormalizedEmail);
     }
 
-    public Task SetNormalizedEmailAsync(User user, string normalizedEmail, CancellationToken cancellationToken)
+    public Task SetNormalizedEmailAsync(User user, string? normalizedEmail, CancellationToken cancellationToken)
     {
         cancellationToken.ThrowIfCancellationRequested();
         if (user == null) throw new ArgumentNullException(nameof(user));
         if (normalizedEmail == null) throw new ArgumentNullException(nameof(normalizedEmail));
 
         user.NormalizedEmail = normalizedEmail;
-        return Task.FromResult<object>(null);
+        return Task.FromResult<object?>(null);
     }
 
     public async Task<User?> FindByEmailAsync(string? email, CancellationToken cancellationToken = default(CancellationToken))

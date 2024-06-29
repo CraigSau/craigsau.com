@@ -128,7 +128,7 @@ public class AccountDataService
 
         using MySqlDataReader reader = command.ExecuteReader();
 
-        User resultUser = null;
+        User? resultUser = null;
 
         while (reader.Read())
         {
@@ -163,7 +163,7 @@ public class AccountDataService
 
         using MySqlDataReader reader = command.ExecuteReader();
 
-        User resultUser = null;
+        User? resultUser = null;
 
         while (reader.Read())
         {

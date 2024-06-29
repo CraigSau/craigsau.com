@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Cors;
 
 using server.models;
 
@@ -55,7 +54,7 @@ public class AccountController : ControllerBase
             }
         }
 
-        return Ok($"Successfully registered user! \n Welcome {newUser.FirstName}");
+        return Ok($"Successfully registered user! \n Welcome {newUser!.FirstName}");
     }
 
     [HttpPost()]
@@ -82,7 +81,7 @@ public class AccountController : ControllerBase
         }
 
         // Having to do this is really dumb... has to be something I'm doing wrong to not have this data here already.
-        var userFirstName = _userManager.FindByNameAsync(user.UserName).Result;
-        return Ok($"Logged in as {user.UserName},\n Welcome {userFirstName.FirstName}");
+        var userFirstName = _userManager.FindByNameAsync(user.UserName!).Result;
+        return Ok($"Logged in as {user.UserName},\n Welcome {userFirstName!.FirstName}");
     }
 }

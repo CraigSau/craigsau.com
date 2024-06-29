@@ -30,7 +30,7 @@ services:
       build: 
         context: ./client
       ports:
-        - '8080:80'
+        - '80:80'
       develop:
         watch:
           - action: sync

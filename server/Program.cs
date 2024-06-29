@@ -77,13 +77,14 @@ public class Program
         app.UseHttpsRedirection();
 
         app.UseRouting();
-
+        app.UseCors();
         app.UseAuthentication();
         app.UseAuthorization();
 
-        app.MapControllers();
-
-        app.UseCors();
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+        });
 
         app.Run();
     }

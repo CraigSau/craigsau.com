@@ -31,7 +31,6 @@ public class AccountController : ControllerBase
     }
 
     [HttpPost()]
-    [EnableCors()]
     [Route("Register")]
     [AllowAnonymous]
     public async Task<IActionResult> Register([FromForm] User newUser)
@@ -59,7 +58,6 @@ public class AccountController : ControllerBase
     }
 
     [HttpPost()]
-    [EnableCors()]
     [Route("Login")]
     [AllowAnonymous]
     public async Task<IActionResult> Login([FromForm] User user)

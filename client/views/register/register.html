@@ -17,42 +17,71 @@
     <title>Craig Sauers</title>
 </head>
 
-<body>
+<body class="flex flex-col bg-black text-green-600 px-40 py-72">
     <header-component></header-component>
     <div>
-        <h2>Register</h2>
-        <div id="outer-div" hx-ext="response-targets">
-            <div id="response-div">
-                <form hx-post="https://localhost:5286/Account/Register" hx-trigger="submit"
-                    hx-target-error="#server-errors">
-                    <div>
-                        <input name="userName" type="text" placeholder="Username" required>
+        <h2 class="text-center text-2xl font-bold p-4">Register</h2>
+        <div hx-ext="response-targets"
+            class="flex flex-col items-center justify-center p-5 border-2 rounded-lg border-green-600">
+            <form hx-post="http://localhost:5286/Account/Register" hx-trigger="submit" hx-target-error="#server-errors"
+                class="flex flex-col items-center justify-center w-full p-6">
+                <div class="inputBox border-2 rounded-lg border-green-600 w-full">
+                    <div class="flex p-4">
+                        <input name="userName" type="text" placeholder="Username" required
+                            class="bg-black text-green-600 w-full placeholder-green-600">
                     </div>
-                    <div>
-                        <input name="firstName" type="text" placeholder="First Name" required>
+                </div>
+                <br>
+                <div class="inputBox border-2 rounded-lg border-green-600 w-full">
+                    <div class="flex p-4">
+                        <input name="firstName" type="text" placeholder="First Name" required
+                            class="bg-black text-green-600 w-full placeholder-green-600">
                     </div>
-                    <div>
-                        <input name="lastName" type="text" placeholder="Last Name" required>
+                </div>
+                <br>
+                <div class="inputBox border-2 rounded-lg border-green-600 w-full">
+                    <div class="flex p-4">
+                        <input name="lastName" type="text" placeholder="Last Name" required
+                            class="bg-black text-green-600 w-full placeholder-green-600">
                     </div>
-                    <div>
-                        <input name="email" type="text" placeholder="Email" required>
+                </div>
+                <br>
+                <div class="inputBox border-2 rounded-lg border-green-600 w-full">
+                    <div class="flex p-4">
+                        <input name="email" type="text" placeholder="Email" required
+                            class="bg-black text-green-600 w-full placeholder-green-600">
                     </div>
-                    <div>
-                        <input name="passwordHash" type="password" placeholder="Password" required>
+                </div>
+                <br>
+                <div class="inputBox border-2 rounded-lg border-green-600 w-full">
+                    <div class="flex p-4">
+                        <input name="passwordHash" type="password" placeholder="Password" required
+                            class="bg-black text-green-600 w-full placeholder-green-600">
                     </div>
-                    <div>
-                        <input name="confirmPassword" type="password" placeholder="Confirm Password" required>
+                </div>
+                <br>
+                <div class="inputBox border-2 rounded-lg border-green-600 w-full">
+                    <div class="flex p-4">
+                        <input name="confirmPassword" type="password" placeholder="Confirm Password" required
+                            class="bg-black text-green-600 w-full placeholder-green-600">
                     </div>
-                    <div>
-                        <button type="submit" required><i>Register</i></button>
-                    </div>
-                    <br>
-                    <div id="server-errors"></div>
-                </form>
-            </div>
-            <div>
-                <a href="../login/login.html">Log-in Instead</a>
-            </div>
+                </div>
+                <br>
+                <div class="flex justify-center items-center p-6 w-1/3">
+                    <button type="submit" required
+                        class="flex justify-center ytext-center border-2 rounded-lg border-green-600 w-full py-4"><i>Register</i></button>
+                </div>
+                <br>
+                <div id="server-errors"></div>
+                <br>
+                <div>
+                    <p>Have an account?</p>
+                </div>
+                <br>
+                <div>
+                    <a class="underline" href="../login/login.html">Login here</a>
+                </div>
+            </form>
         </div>
     </div>
     <script src="../../htmx/htmx.min.js"></script>

@@ -24,6 +24,13 @@ public class Program
                        .AllowAnyHeader();
                 //.AllowCredentials();
             });
+
+            options.AddPolicy("AllowSpecificOrigins", policy =>
+            {
+                policy.WithOrigins("http://localhost", "http://localhost:80", "http://craigsau.dev", "https://craigsau.dev")
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
         });
 
         builder.Services.AddIdentity<User, Role>().AddUserStore<UserStore>().AddDefaultTokenProviders();
@@ -68,18 +75,18 @@ public class Program
         WebApplication app = builder.Build();
 
         // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
+        // if (app.Environment.IsDevelopment())
+        // {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+        // }
 
         app.UseHttpsRedirection();
 
         app.UseRouting();
         //app.UseRateLimiter();
 
-        app.UseCors();
+        app.UseCors("AllowSpecificOrigins");
 
         app.UseAuthentication();
         app.UseAuthorization();

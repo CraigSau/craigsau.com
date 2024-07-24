@@ -25,6 +25,8 @@ services:
           - action: sync
             path: ./server
             target: /src/server
+    env_file:
+      - ./server/.env
 
   client:
       build: 

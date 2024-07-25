@@ -41,6 +41,7 @@ public class AccountController : ControllerBase
     [AllowAnonymous]
     public async Task<IActionResult> Register([FromForm] User newUser)
     {
+        // TODO: Add logic for sending an email for confirmation upon registration
         logger.LogInformation("Attempting to register new user!");
         if (ModelState.IsValid && newUser != null)
         {
@@ -61,7 +62,7 @@ public class AccountController : ControllerBase
             }
         }
 
-        return Ok($"<pre>Successfully egistered user! \n Welcome {newUser!.UserName}</pre>");
+        return Ok($"<pre>Successfully registered user! \n Welcome {newUser!.UserName}</pre>");
     }
 
     [HttpPost()]
@@ -87,8 +88,8 @@ public class AccountController : ControllerBase
             }
         }
 
-        Console.WriteLine("Attempting to send email from EmailService!");
-        await emailService.SendEmailAsync("kaleethieme@gmail.com", "We are so back", "Got emails working from my website, as you can see :)");
+        // Console.WriteLine("Attempting to send email from EmailService!");
+        // await emailService.SendEmailAsync("kaleethieme@gmail.com", "We are so back", "Got emails working from my website, as you can see :)");
 
         // Having to do this is really dumb... has to be something I'm doing wrong to not have this data here already.
         var userFirstName = userManager.FindByNameAsync(user.UserName!).Result;

@@ -15,7 +15,8 @@ services:
     ports:
       - '5286:80'
     command: --init-file /server/data/Database.sql
-    volumes: 
+    volumes:
+          - ./server:/src/server
           - ./mysql-data:/var/lib/mysql
     depends_on:
       db:
@@ -25,12 +26,17 @@ services:
           - action: sync
             path: ./server
             target: /src/server
+    env_file:
+      - ./server/.env
 
   client:
       build: 
         context: ./client
       ports:
         - '80:80'
+      volumes:
+        - ./client:/usr/share/nginx/html
+      restart: unless-stopped
       develop:
         watch:
           - action: sync

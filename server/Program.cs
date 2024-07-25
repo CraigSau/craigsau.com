@@ -1,7 +1,10 @@
 using server.models;
 using server.stores;
 using server.dataaccess;
+using server.services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using DotNetEnv;
 
 public class Program
 {
@@ -11,8 +14,10 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllers();
+
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
+
         builder.Services.AddSwaggerGen();
 
         builder.Services.AddCors(options =>
@@ -55,6 +60,7 @@ public class Program
             options.User.AllowedUserNameCharacters =
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._";
             options.User.RequireUniqueEmail = true;
+
         });
 
         builder.Services.ConfigureApplicationCookie(options =>
@@ -71,6 +77,16 @@ public class Program
         builder.Services.AddTransient<IRoleStore<Role>, RoleStore>();
 
         builder.Services.AddTransient<AccountDataService>();
+
+        builder.Services.AddTransient<IEmailService, EmailService>();
+        builder.Services.AddTransient<IEmailSender, EmailService>();
+
+        Env.Load();
+        Console.WriteLine($"SMTP_HOST: {Environment.GetEnvironmentVariable("SMTP_HOST")}");
+        Console.WriteLine($"SMTP_HOST ATTEMPT2: {Env.GetString("SMTP_HOST")}");
+
+        builder.Configuration.AddEnvironmentVariables();
+
 
         WebApplication app = builder.Build();
 
@@ -92,11 +108,6 @@ public class Program
         app.UseAuthorization();
 
         app.MapControllers();
-
-        // app.UseEndpoints(endpoints =>
-        // {
-        //     endpoints.MapControllers();
-        // });
 
         app.Run();
     }

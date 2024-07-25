@@ -1,8 +1,12 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using System.Net.Mail;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 using server.models;
+using server.services;
 
 
 namespace server.controllers;
@@ -11,22 +15,25 @@ namespace server.controllers;
 [Route("[controller]")]
 public class AccountController : ControllerBase
 {
-    private readonly IConfiguration _configuration;
-    private readonly ILogger<User> _logger;
-    private readonly UserManager<User> _userManager;
-    private readonly SignInManager<User> _signInManager;
+    private readonly IConfiguration configuration;
+    private readonly ILogger<User> logger;
+    private readonly UserManager<User> userManager;
+    private readonly SignInManager<User> signInManager;
+    private readonly IEmailService emailService;
 
     public AccountController(
-            IConfiguration configuration,
-            ILogger<User> logger,
-            UserManager<User> userManager,
-            SignInManager<User> signInManager
+            IConfiguration Configuration,
+            ILogger<User> Logger,
+            UserManager<User> UserManager,
+            SignInManager<User> SignInManager,
+            IEmailService EmailService
     )
     {
-        _configuration = configuration;
-        _logger = logger;
-        _userManager = userManager;
-        _signInManager = signInManager;
+        configuration = Configuration;
+        logger = Logger;
+        userManager = UserManager;
+        signInManager = SignInManager;
+        emailService = EmailService;
     }
 
     [HttpPost()]
@@ -34,14 +41,15 @@ public class AccountController : ControllerBase
     [AllowAnonymous]
     public async Task<IActionResult> Register([FromForm] User newUser)
     {
-        _logger.LogInformation("Attempting to register new user!");
+        // TODO: Add logic for sending an email for confirmation upon registration
+        logger.LogInformation("Attempting to register new user!");
         if (ModelState.IsValid && newUser != null)
         {
-            IdentityResult result = await _userManager.CreateAsync(newUser, newUser.PasswordHash!);
+            IdentityResult result = await userManager.CreateAsync(newUser, newUser.PasswordHash!);
             if (result.Succeeded)
             {
-                await _signInManager.SignInAsync(newUser, isPersistent: false);
-                _logger.LogInformation(3, "User create a new account with password.");
+                await signInManager.SignInAsync(newUser, isPersistent: false);
+                logger.LogInformation(3, "User create a new account with password.");
             }
             else
             {
@@ -64,10 +72,10 @@ public class AccountController : ControllerBase
     {
         if (ModelState.IsValid)
         {
-            var result = await _signInManager.PasswordSignInAsync(user.UserName!, user.PasswordHash!, false, false);
+            var result = await signInManager.PasswordSignInAsync(user.UserName!, user.PasswordHash!, false, false);
             if (result.Succeeded)
             {
-                _logger.LogInformation($"{user.UserName} has successfully signed in!");
+                logger.LogInformation($"{user.UserName} has successfully signed in!");
             }
             else
             {
@@ -80,8 +88,11 @@ public class AccountController : ControllerBase
             }
         }
 
+        // Console.WriteLine("Attempting to send email from EmailService!");
+        // await emailService.SendEmailAsync("kaleethieme@gmail.com", "We are so back", "Got emails working from my website, as you can see :)");
+
         // Having to do this is really dumb... has to be something I'm doing wrong to not have this data here already.
-        var userFirstName = _userManager.FindByNameAsync(user.UserName!).Result;
+        var userFirstName = userManager.FindByNameAsync(user.UserName!).Result;
         return Ok($"<pre>Successfully logged in.\n Welcome {user.UserName}!</pre>");
     }
 }
